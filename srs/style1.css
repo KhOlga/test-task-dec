@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.big {
+    text-transform: uppercase;
+}
+.container {
+    display: grid;
+
+    grid-template-columns: [col1] 150px [col2] 150px [col3] 150px [col4] 150px [col5] 150px [col6] 150px [col7] 150px;
+    grid-template-rows: [header1] 150px [header2] 150px [header3] 150px [discount] 120px [form] 350px;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: col3;
+    grid-row-start: header1;
+    grid-row-end: header1;
+    background-color: rgb(19, 202, 193);
+    color: rgb(0, 0, 0);
+
+
+}
+
+.item21{
+    grid-column-start: 1;
+    grid-column-end: col3;
+    grid-row-start: discount;
+    grid-row-end: discount;
+
+    background-color: rgb(3, 114, 109);
+    color: rgb(255, 255, 255);
+    text-align: left;
+
+    font-family: Bradley Hand, cursive;
+}
+
+.item22{
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: discount;
+    grid-row-end: discount;
+
+    background-color: rgb(3, 114, 109);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.item23{
+    grid-column-start: 1;
+    grid-column-end: col2;
+    grid-row-start: form;
+    grid-row-end: form;
+
+    background-color: rgb(238, 250, 249);
+    color: rgb(0, 0, 0);
+    text-align: left;
+
+}
+
+.item24{
+    grid-column-start: 2;
+    grid-column-end: col3;
+    grid-row-start: form;
+    grid-row-end: form;
+
+
+}
+
+.item25{
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: form;
+    grid-row-end: form;
+
+    background-color: rgb(238, 250, 249);
+    color: rgb(0, 0, 0);
+    text-align: left;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.col-25, .col-75 {
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.btn {
+    margin-right: 40px;
+    float: right;
+}
+
+.col-25 {
+    height: 40px;
+}
+.col-75 > input{
+    width: 350px;
+    height: 40px;
+    border: 1px solid rgb(39, 186, 180);
+}
+
+div:empty {
+    width: 150px;
+    background: rgb(238, 250, 249);
+}
+
+.full {
+    background: rgb(11, 177, 169);
+    color: rgb(255, 255, 255);
+
+}
+
+body{
+    width: 100% !important;
+    background-color: blue !important;
+}
