@@ -5,101 +5,172 @@
     font-family: Andale Mono, monospace;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-[class*="col-"] {
-    float: left;
+.big {
+    text-transform: uppercase;
 }
 
-.row{
-    height: auto;
-}
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+.big > h1 {
+    margin-top: 0.7em;
+    margin-left: 0.7em;
+    font-size: 3.5vw;
 }
 
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    background-color: DodgerBlue;
+.big > h6 {
+    margin-top: 2em;
+    margin-left: 1.3em;
+    font-size: 1vw;
 }
+.container {
+    display: grid;
 
-.flex-container > div {
-
-}
-
-
-.grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    height: 450px;
-}
-
-.grid-container > div {
-    text-align: left;
-    padding: 5px 0;
+    grid-template-columns: [col1] 14.13vw [col2] 14.13vw [col3] 14.13vw [col4] 14.13vw [col5] 14.13vw [col6] 14.13vw [col7] 14.13vw;
+    grid-template-rows: [header1] 14.13vw [header2] 14.13vw [header3] 14.13vw [discount] 12vw [form] 22vw;
 }
 
 .item1 {
-    grid-column: 1 / span 2;
+    grid-column-start: col1;
+    grid-column-end: col3;
+    grid-row-start: header1;
+    grid-row-end: header2;
     background-color: rgb(19, 202, 193);
     color: rgb(0, 0, 0);
-    width: 300px;
-    height: 150px;
+}
+
+.item21{
+    grid-column-start: col1;
+    grid-column-end: 8;
+    grid-row-start: discount;
+    grid-row-end: form;
+
+    background-color: rgb(3, 114, 109);
+    color: rgb(255, 255, 255);
+    text-align: left;
+
+    font-family: Bradley Hand, cursive;
+}
+
+.item21 > h2 {
+    font-size: 7vw;
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+}
+
+.item22{
+    grid-column-start: col2;
+    grid-column-end: 8;
+    grid-row-start: discount;
+    grid-row-end: discount;
+
+    color: rgb(255, 255, 255);
+    text-align: justify;
+}
+
+.item22 > p {
+    margin-top: 5em;
+    margin-left: 5em;
+    font-size: 1vw;
+}
+
+.item23{
+    grid-column-start: col1;
+    grid-column-end: col2;
+    grid-row-start: form;
+    grid-row-end: form;
+
+    background-color: rgb(238, 250, 249);
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.item23 > div  {
+    margin-top: 1.8vw;
+    margin-left: 2.7vw;
+}
+
+.item23 > div > h1{
+    font-size: 3.5vw;
+}
+
+.item23 > div > p {
+    font-size: 1vw;
+}
+
+.item24{
+    grid-column-start: 2;
+    grid-column-end: col3;
+    grid-row-start: form;
+    grid-row-end: form;
+}
+
+.item25{
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: form;
+    grid-row-end: form;
+
+    background-color: rgb(238, 250, 249);
+    color: rgb(0, 0, 0);
+    text-align: left;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.form-element {
+    margin-top: 1vw;
+    margin-left: 6vw;
+    font-size: 1vw;
+
+}
+
+.btn {
+    margin-right: 1vw;
+    padding: 0.7em 2.3em;
+    float: right;
+    font-size: 1vw;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 0.6vw 0.6vw;
+
+    cursor: pointer;
+    box-shadow: 0vw 0.5vw rgb(245, 151, 153);
+
+    background: linear-gradient(rgb(245,157,159), rgb(248, 181,183));
+
+}
+
+label {
+    height: 2em;
+    margin-top: 1em;
+
+}
+
+.form-element > input{
+    width: 25vw;
+    height: 3vw;
+    border: 1px solid rgb(39, 186, 180);
+
+}
+
+.msg {
+    height: 13vw !important;
 }
 
 div:empty {
-    width: 150px;
-    height: 150px;
+    width: 14.13vw;
     background: rgb(238, 250, 249);
 }
 
-div {
+.full {
     background: rgb(11, 177, 169);
     color: rgb(255, 255, 255);
-    width: 150px;
-    height: 150px;
 
 }
 
-.discount {
-
-    background-color: rgb(3, 114, 109);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Bradley Hand, cursive;
-
+body{
+    width: 100% !important;
+    background-color: blue !important;
 }
-
-.discount > .item22 {
-
-    background-color: rgb(3, 114, 109);
-    color: rgb(255, 255, 255);
-
-
-
-}
-
-.item23, .item24, .item25 {
-    background: rgb(238, 250, 249);
-    color: rgb(0, 0, 0);
-
-}
-
-
-
